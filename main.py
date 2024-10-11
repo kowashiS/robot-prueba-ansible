@@ -26,7 +26,7 @@ def main():
         driver.find_element(By.ID, 'login-button').click()
 
         # Screenshot
-        driver.save_screenshot('C://Robot//screenshot.png')
+        driver.save_screenshot('.//results//screenshot.png')
 
     finally:
         # Cierra el navegador
