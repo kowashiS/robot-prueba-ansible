@@ -1,9 +1,17 @@
+import os
 from selenium import webdriver
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 
 def main():
+    screenshot_path = './/results//screenshot.png'
+
+    screenshot_dir = os.path.dirname(screenshot_path)
+
+    if not os.path.exists(screenshot_dir):
+        os.makedirs(screenshot_dir)
+
     # Configuración automática del WebDriver usando webdriver-manager
     service = Service(EdgeChromiumDriverManager().install())
     options = webdriver.EdgeOptions()
